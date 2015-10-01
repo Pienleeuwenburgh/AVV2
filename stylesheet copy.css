@@ -1,0 +1,304 @@
+/* Pien Leeuwenburgh | 500691911 | V1-10 | Jonathan Leenman, Michelle van den Aardweg | 1 oktober 2015 */
+
+
+
+  {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+}
+
+
+
+body {
+    font-size: 1em;
+    background: #ff9ff4;
+    display: flex;
+    flex-wrap: wrap;
+    order: 0;
+}
+
+
+
+
+img {
+    width: 80%;
+    background-color: transparent;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+img:hover {
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    transition-duration: 4s;
+}
+
+
+h1:hover {
+    background: #ff7ff0;
+    transform: rotate(360deg);
+    transition: all 3s ease-out;
+}
+
+
+label {
+    color: yellow;
+    margin-left: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="search"] {
+    border: 2em solid #b211b9;
+    background-color: white;
+    color: #f8a9ff;
+    border-radius: 5em;
+    padding: 1.3em;
+
+}
+button {
+    color: #fff;
+    background-color: black;
+    border-radius: 100em;
+    padding: 2em;
+    box-shadow: blue 1px 1px 1px,blue -1px 1px 1px;
+    border: 2em solid #fff;
+
+}
+
+
+
+
+body > header {
+    background-image: url(img/pink-clouds-gif.gif);
+     /* Gif van: http://cool.eyecatchingtattoos.com/pink-glitter-background/*/
+    background-repeat: repeat;
+    width: 100%;
+    order: 0;
+    font-size:1em;
+}
+
+nav ul {
+    display: block;
+    background: #2c3e50;
+}
+
+nav li {
+    background: #2c3e50;
+    list-style-image: url(img/Necromancer-icon-small.png);
+    width: 2em;
+    height: 5em;
+
+    line-height: 1.5em;
+    color: white;
+    font-weight: 10;
+    font-size: 1.1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+
+
+img:nth-child(1) {
+    border-radius: 20em;
+    width: 15em;
+}
+
+
+body > main {
+    width: 80%;
+    order: 1;
+
+}
+
+body > section {
+    display: flex;
+    flex-direction: row;
+    border: 1em solid #ffa;
+    padding: 3em;
+    text-align: left;
+    background: #b38aff;
+    order: 2;
+}
+
+
+
+
+
+
+
+body > aside a {
+    font-weight: 300;
+}
+
+body > aside a:visited {
+    color: green;
+}
+
+body > aside {
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    order: 1;
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+body > footer {
+    bottom: 0;
+    display: block;
+    background: #bc3eff;
+    color: white;
+    order: 3;
+
+}
+
+#sitemap h2 {
+    display: block;
+    color: white;
+    text-align: left;
+    font-size: 1.3em;
+
+}
+
+body footer ul {
+    display: block;
+    background: #2c3e50;
+    list-style-type:circle;
+}
+
+body footer li a {
+    display: block;
+    color: white;
+}
+
+body footer li  {
+    display: block;
+    padding: 0.3em;
+
+}
+
+#search {
+    display: block;
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+
+#credits {
+    display: block;
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+
+
+
+form input  {
+    display: block;
+    border: 1px solid #999;
+    height: 25px;
+}
+
+textarea {
+    display: block;
+    border: 1px solid #999;
+    height: 75px;
+}
+
+
+
+@media (max-width: 800px) {
+
+    body > main {
+        order: 1;
+    }
+
+    body > section {
+        order: 2;
+    }
+
+    body > header {
+        order: 0;
+    }
+
+    body > aside {
+        order: 3;
+        width: 100%;
+    }
+
+    body > footer {
+        order: 4;
+        width: 100%;
+    }
+    }
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: yellow;
+    }
+
+    body > main {
+        order: 1;
+        background-color: yellow;
+    }
+
+    body > section {
+        order: 2;
+        background-color: yellow;
+
+    }
+
+    body > header {
+        order: 0;
+        background-color: yellow;
+
+    }
+
+    body > aside {
+        order: 3;
+        width: 100%;
+        background-color: yellow;
+
+    }
+
+    body > footer {
+        order: 4;
+        width: 100%;
+        background-color: yellow;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
