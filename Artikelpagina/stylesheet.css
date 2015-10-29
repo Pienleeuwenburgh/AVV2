@@ -1,0 +1,432 @@
+/*
+Auteur code: Pien Leeuwenburgh
+Studentnummer: 500691911
+klas V1 10
+Docenten: Jonathan Leenman en Michelle
+*/
+
+
+
+  *{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+}
+
+
+
+body {
+    font-size: 1em;
+    background: #ff9ff4;
+}
+
+
+img {
+    width: 80%;
+    background-color: transparent;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+img:hover {
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    transition-duration: 4s;
+}
+
+
+h1:hover {
+    background: #ff7ff0;
+    transform: rotate(360deg);
+    transition: all 3s ease-out;
+}
+
+
+label {
+    color: yellow;
+    margin-left: 1px;
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+}
+
+input {
+    width: 50%;
+}
+
+input[type="search"] {
+    border: 2em solid #b211b9;
+    background-color: white;
+    color: #f8a9ff;
+    border-radius: 5em;
+    padding: 1.3em;
+    display: block;
+    float: left;
+
+}
+button {
+    color: #fff;
+    background-color: black;
+    border-radius: 100em;
+    padding: 2em;
+    box-shadow: blue 2em 1em 1em,blue -1em 1em 1em;
+    border: 2em solid #fff;
+
+}
+
+
+
+
+body > header {
+/*    background-image: url(img/pink-clouds-gif.gif);*/
+     /* Gif van: http://cool.eyecatchingtattoos.com/pink-glitter-background/*/
+    background-repeat: repeat;
+    font-size:1em;
+}
+
+nav ul {
+    display: block;
+    background: #2c3e50;
+}
+
+nav li {
+    background: #2c3e50;
+    list-style-image: url(img/Necromancer-icon-small.png);
+    width: 2em;
+    height: 5em;
+
+    line-height: 1.5em;
+    color: white;
+    font-weight: 10;
+    font-size: 1.1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+
+
+img:nth-child(1) {
+    border-radius: 20em;
+    width: 15em;
+}
+
+
+
+body > section {
+    display: flex;
+    flex-direction: row;
+    border: 1em solid #ffa;
+    padding: 3em;
+    text-align: left;
+    background: #b38aff;
+}
+
+
+
+
+body > aside a {
+    font-weight: 300;
+}
+
+body > aside a:visited {
+    color: green;
+}
+
+body > aside {
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 0.04em 0.04em 0em yellow;
+}
+
+p + p {
+    color: red;
+}
+
+body > footer {
+    bottom: 0;
+    display: block;
+    background: #bc3eff;
+    color: white;
+
+}
+
+#sitemap h2 {
+    display: block;
+    color: white;
+    text-align: left;
+    font-size: 1.3em;
+
+}
+
+body footer ul {
+    display: block;
+    background: #2c3e50;
+    list-style-type:circle;
+}
+
+body footer li a {
+    display: block;
+    color: white;
+}
+
+body footer li  {
+    display: block;
+    padding: 0.3em;
+
+}
+
+#search {
+    display: block;
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+
+#credits {
+    display: block;
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+
+
+
+form input  {
+    display: block;
+    border: 1px solid #999;
+    height: 25px;
+}
+
+textarea {
+    display: block;
+    border: 1px solid #999;
+    height: 75px;
+}
+
+
+
+/* DESKTOP FORMAAT */
+
+
+
+@media (max-width: 100em) {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    body > header {
+        width: 20%;
+        order: 0;
+        background-image: url(img/giphy.gif);
+/*
+        background-size: 250%;
+        width: 100%;
+        background-repeat: no-repeat;
+*/
+    }
+
+    body > main {
+        width: 60%;
+        order: 1;
+
+    }
+
+    fieldset {
+        width: 45em;
+        border: 1em solid #ff00ce;
+        border-radius: 1em;
+        padding: 2em;
+        text-align: right;
+    }
+
+    legend {
+        border: 1em solid #ffff8b;
+        background-image: url(img/glitter.gif);
+        border-radius: 1em;
+        padding: 1em 2em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+/*
+    #project.mystyle {
+        width: 10em;
+    }
+*/
+
+
+    body > aside {
+        width: 20%;
+        order: 2;
+
+    }
+
+    body > section {
+        order: 3;
+    }
+
+
+
+
+    body > footer {
+        order: 4;
+        width: 100%;
+    }
+    }
+
+
+
+/* TABLET FORMAAT */
+
+
+
+@media (max-width: 80em) {
+
+     body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    body > header {
+        order: 0;
+        width: 100%;
+        background-color: blue;
+        background-image: url(img/glitter.gif);
+    }
+
+    body > main {
+        order: 1;
+        width: 80%;
+        background-color: lightgreen;
+            }
+
+        fieldset {
+  width: 25em;
+  border: 1em solid #ff00ce;
+  border-radius: 1em;
+  padding: 2em;
+  text-align: right;
+}
+
+
+legend {
+  background-color: #efefef;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+    body > aside {
+        order: 2;
+        width: 20%;
+        background-color: lightblue;
+
+    }
+
+    body > section {
+        width: 100%;
+        order: 3;
+        background-color: lightgreen;
+    }
+
+
+    body > footer {
+        order: 4;
+        width: 100%;
+        background-color: purple;
+
+    }
+    }
+
+
+/* MOBILE FORMAAT */
+
+
+
+@media (max-width: 50em) {
+
+    body {
+        background-color: yellow;
+        flex-direction: column;
+    }
+
+    body > main {
+        order: 1;
+        background-color: yellow;
+    }
+
+    body > section {
+        order: 2;
+        background-color: yellow;
+
+    }
+
+    body > header {
+        order: 0;
+        background-color: yellow;
+        background-image: url(img/pink-clouds-gif.gif);
+
+    }
+
+    body > aside {
+        order: 3;
+        width: 100%;
+        background-color: yellow;
+
+    }
+
+    body > footer {
+        order: 4;
+        width: 100%;
+        background-color: yellow;
+
+    }
+
+}
+
+    .mystyle {
+        color: yellow;
+        background-image: url(img/themglittaz.gif);
+    }
+
+
+
+    .hidden {
+        display: none;
+    }
+
+    video {
+        /* Als de max-width ingesteld is op 100%  schaalt de video mee, kleiner als het moet maar nooit groter dan het originele bestand */
+        max-width: 100%;
+        height: auto;
+    }
+
+audio {
+    width: 100%;
+}
+

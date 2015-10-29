@@ -158,9 +158,12 @@ body > aside {
 
 a {
     text-decoration: none;
+    text-shadow: 0.04em 0.04em 0em yellow;
 }
 
-
+p + p {
+    color: red;
+}
 
 body > footer {
     bottom: 0;
