@@ -9,6 +9,7 @@ Docenten: Jonathan Leenman en Michelle
 <html lang="nl">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
         <title>Formulierpagina</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
@@ -18,25 +19,30 @@ Docenten: Jonathan Leenman en Michelle
         <!-- header met logo & navigatie -->
         <header>
             <h1>CMD Amsterdam - Intranet</h1>
+            <div class="balk">
+            <button id="menuknop"><img src="img/menu10.png" alt="menu"></button>
+            <button id="zoekknop"><img src="img/magnifyingglass57.png" alt="zoeken"></button>
+            <button id="profielknop"><img src="img/profile27.png" alt="profiel"></button>
+            </div>
             <p>Communication and Multimedia Design is een ontwerpopleiding voor interactieve media in Amsterdam.</p>
-            <img src="img/cmd_logo.png" alt="">
-            <nav>
+<!--            <img src="img/cmd_logo.png" alt="">-->
+            <nav class="navigatie">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="artikelpagina.html">Home</a></li>
                     <li><a href="#">Opleiding</a></li>
                     <li><a href="#">Onderwijsprogramma</a></li>
                     <li><a href="#">Organisatie</a></li>
-                    <li><a href="#">Stages en projecten</a></li>
+                    <li><a href="formulierpagina.html">Stages en projecten</a></li>
                 </ul>
             </nav>
-            <form method="get" action="Formulierpagina.html">
+            <form method="get" action="formulierpagina.html" class="zoeken">
                 <label>
                     Zoeken
-                    <input type="search" placeholder="Zoek op titel, beschrijving, etc…" name="q">
+                    <input type="search" placeholder="Zoek op titel" name="q" id="hoplakaa">
                 </label>
-                <button type="submit">Zoek!</button>
+                <button type="submit" id="hoplakee">Zoek!</button>
             </form>
-            <p class="to-profile"><a href="#">Profielpagina Elena Harris</a></p>
+            <p class="profiel"><a href="#">Profielpagina Elena Harris</a></p>
         </header>
 
         <!-- Main article - Contact formulier  -->
@@ -47,7 +53,7 @@ Docenten: Jonathan Leenman en Michelle
             <p>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</p>
             <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="#">contact</a> met ons op.</p>
 
-            <form method="post" action="Formulierpagina.html">
+            <form method="post" action="formulierpagina.html">
 
                 <fieldset>
                     <legend>Contactgegevens</legend>
@@ -198,8 +204,8 @@ Docenten: Jonathan Leenman en Michelle
         <section class="related">
 
             <h2>Voorbeeld projecten van studenten</h2>
-
-            <article>
+            <div id="wrapper">
+            <article class="ja1">
                 <header>
                     <h3>Project: Moet ik Rennen?</h3>
                     <p>Tagline: Moet ik rennen is een applicatie voor de Nederlandse treinen. Hij toont je exact hoeveel tijd er nog is, voordat je trein vertrekt.</p>
@@ -244,7 +250,7 @@ Docenten: Jonathan Leenman en Michelle
                 </section>
             </article>
 
-            <article>
+            <article class="ja2">
                 <header>
                     <h3>Project: Muzieknote</h3>
                     <p>Tagline: Muzieknote is een webapplicatie waarbij muziek en bijzondere verhalen worden gecombineerd om bewoners van Amersfoort met elkaar in contact te brengen.</p>
@@ -291,8 +297,7 @@ Docenten: Jonathan Leenman en Michelle
                     </ul>
                 </section>
             </article>
-
-            <article>
+            <article class="ja3">
                 <header>
                     <h3>Project: TWOSOME</h3>
                     <p>Tagline: TWOSOME is een smartphone applicatie voor jonge samenwonende stelletjes, die moeite hebben met het verdelen en bijhouden van het huishouden en dit een vervelende bezigheid vinden.</p>
@@ -338,7 +343,7 @@ Docenten: Jonathan Leenman en Michelle
                     </ul>
                 </section>
             </article>
-
+            </div>
         </section>
 
         <!-- Sidebar teksten en info: Laatste mededelingen, Agenda, Twitter -->
@@ -518,6 +523,6 @@ Docenten: Jonathan Leenman en Michelle
             <p id="feedback"><a href="#">Geef ons feedback</a></p>
 
         </footer>
-             <script src="script.js"></script>
+            <script src="script1.js"></script>
     </body>
 </html>

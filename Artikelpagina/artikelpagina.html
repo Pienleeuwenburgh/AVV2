@@ -9,7 +9,9 @@ Docenten: Jonathan Leenman en Michelle
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-        <meta charset="utf-8">
+    <!--viewport geeft de browser instructies over hoe hij de dimenties en schaal van de pagina moet controleren.-->
+    <meta name="viewport" content="width-device-width, initial-scale=1" >
+    <meta charset="utf-8">
         <title>Artikelpagina</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
@@ -18,25 +20,31 @@ Docenten: Jonathan Leenman en Michelle
         <!-- header met logo & navigatie -->
         <header>
             <h1>CMD Amsterdam - Intranet</h1>
+            <div class="balk">
+            <button id="menuknop"><img src="img/menu10.png" alt="menu"></button>
+            <button id="zoekknop"><img src="img/magnifyingglass57.png" alt="zoeken"></button>
+            <button id="profielknop"><img src="img/profile27.png" alt="profiel"></button>
+            </div>
             <p>Communication and Multimedia Design is een ontwerpopleiding voor interactieve media in Amsterdam.</p>
-            <img src="img/cmd_logo.png" alt="">
-            <nav>
+<!--            <img src="img/cmd_logo.png" alt="logo">-->
+            <nav class="navigatie">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="artikelpagina.html">Home</a></li>
                     <li><a href="#">Opleiding</a></li>
                     <li><a href="#">Onderwijsprogramma</a></li>
                     <li><a href="#">Organisatie</a></li>
-                    <li><a href="#">Stages en projecten</a></li>
+                    <li><a href="formulierpagina.html">Stages en projecten</a></li>
                 </ul>
             </nav>
-            <form method="get" action="Artikelpagina.html">
+
+            <form method="get" action="Artikelpagina.html" class="zoeken">
                 <label>
                     Zoeken
-                    <input type="search" placeholder="Zoek op titel, beschrijving, etc…" name="q">
+                    <input type="search" placeholder="Zoek op titel" name="q" id="hoplakaa">
                 </label>
-                <button type="submit">Zoek!</button>
+                <button type="submit" id="hoplakee">Zoek!</button>
             </form>
-            <p class="to-profile"><a href="#">Profielpagina Elena Harris</a></p>
+            <p class="profiel"><a href="#">Profielpagina Elena Harris</a></p>
         </header>
 
         <!-- Main article -->
@@ -47,6 +55,21 @@ Docenten: Jonathan Leenman en Michelle
                 <header>
                     <h1>Opleiding</h1>
                     <h2>CMD Amsterdam</h2>
+                    <audio controls >
+                        <source src="Audio/c.ogg" type="audio/ogg">
+                        <source src="Audio/c.mp3" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                    <audio controls >
+                        <source src="Audio/m.ogg" type="audio/ogg">
+                        <source src="Audio/m.mp3" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                    <audio controls >
+                        <source src="Audio/d.ogg" type="audio/ogg">
+                        <source src="Audio/d.mp3" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
                     <p>De opleiding <span lang="en">Communication &amp; Multimedia Design</span> (CMD) Amsterdam leert studenten alles over het ontwerpen van online interactieve media. Dit betekent het begrijpen, bedenken en maken van interactieve media zoals websites, mobiele applicaties en interactieve televisie. Bij het ontwerpen van interactieve media staat de mens centraal. Niet alleen als eindgebruiker van een toepassing maar ook in de context van zijn leefomgeving. Studenten doen toegepast onderzoek en leren hun ontwerpen te testen op usability, gebruikersbehoefte en meetbare eindresultaten. Ze leren werken in multidisciplinaire projectteams aan opdrachten voor echte projectpartners.</p>
                     <p>De <a href="#opbouw" title="opbouw studieprogramma">vakken</a> gaan over interactie &amp; strategie, -design, -techniek en -cultuur. In de vakken leren studenten te denken en te handelen als een ontwerper. Hiervoor leren ze naast ‘ontwerpen’ ook ‘maken’, ‘onderzoeken’, ‘projectmanagen’ en ‘adviseren’. Studenten kunnen met behulp van keuzevakken, stages en minoren zelf richting geven aan hun opleiding. Na hun afstuderen komen studenten te werken in de creatieve industrie, gericht op de sector ‘nieuwe media’. Het werkveld waarin de interactieve media ontwerper zich begeeft is sterk in ontwikkeling. De opleiding houdt hier met een flexibel curriculum rekening mee en door met (keuze)vakken en projecten in te springen op nieuwe ontwikkelingen.</p>
                 </header>
@@ -77,25 +100,24 @@ Docenten: Jonathan Leenman en Michelle
                     <h4>Waar leiden we voor op?</h4>
                   <!--  <img src="img/beroepen.jpg" alt="Beroepen waar CMD voor opleidt: Frontend Developer, Visual Designer, Interaction Designer, Content Manager, Projectmanager."> -->
                     <picture>
-                        <source media="(max-width: 50em)" srcset="img/Darth_Vader.png">
-                        <source media="(max-width: 80em)" srcset="img/butterfly-clipart7.gif">
-                        <source srcset="img/beroepen.jpg">
-                        <img src="img/beroepen.jpg" alt="Beroepen waar CMD voor opleidt: Frontend Developer, Visual Designer, Interaction Designer, Content Manager, Projectmanager.">
+                        <source media="(max-width: 37.5em)" srcset="img/kleinberoepen.jpg">
+                        <source media="(max-width: 80em)" srcset="img/picture_fed_480.png">
+                        <source media="(max-width: 100em)" srcset="img/beroepen.jpg">
+                        <source srcset="img/kleinberoepen.jpg">
+                        <img src="img/kleinberoepen.jpg" alt="Beroepen waar CMD voor opleidt: Frontend Developer, Visual Designer, Interaction Designer, Content Manager, Projectmanager.">
                     </picture>
-
-                    <video width="400" controls>
-                        <source src="Video/mov_bbb.mp4" type="video/mp4">
+                    <video controls poster="Video/CMDA_V2_Frontend_2.png">
+                        <source src="Video/CMDA_V2_Frontend_2.mp4" type="video/mp4">
+                        <source src="Video/CMDA_V2_Frontend_2.webm" type="video/webm">
                         <!-- mp4 want die wordt ondersteund door elke browser-->
+                        <!-- webm wordt gepakt als de mp4 niet afspeelt -->
                         <!-- Bron video: http://www.w3schools.com/css/mov_bbb.mp4 -->
                         Your browser does nog support HTML5 video.
                     </video>
                     <p>Studenten kunnen na deze opleiding aan het werk in een grote diversiteit aan beroepen in het interactieve media werkveld. Tijdens de opleiding kunnen zij zich – naast het generieke kernprogramma – middels de profileringsvakken individueel ontwikkelen.</p>
                     <p>Afgestudeerde studenten komen daarmee in aanmerking voor o.a. de volgende vijf beroepen: Visual Interface Designer, Frontend Developer, Projectmanager, Contentmanager en Interaction Designer. Variaties hierop zijn natuurlijk mogelijk.</p>
                     <p>Mocht je als aankomend student meer willen weten of contact op willen nemen met een afgestudeerde student? Neem <a href="#">contact</a> met ons op.</p>
-<!--                    <audio controls autoplay>-->
-                        <audio controls autoplay>
-                        <source src="Audio/tumblr_m6nje4ZNTH1rsf5lfo1.mp3" type="audio/mpeg">
-                    </audio>
+
                     <h4>Uitstroomberoepen</h4>
                     <ol>
                         <li><a href="#">Frontend developer</a></li>
@@ -114,8 +136,9 @@ Docenten: Jonathan Leenman en Michelle
         <section class="related">
 
             <h2>Meer lezen?</h2>
-
-            <article>
+            <div id="wrapper">
+            <button id="artikel1">Rijk in het Oosten - Mattijs Blekemolen</button>
+            <article class="ART1">
                 <header>
                     <h3>Rijk in het Oosten</h3>
                     <p>Gepost door Mattijs Blekemolen</p>
@@ -125,7 +148,8 @@ Docenten: Jonathan Leenman en Michelle
                 <p>In een land niet ver hier vandaan, waar een frisse zomerbries door de groene bergen waait… <a href="#">lees verder</a></p>
             </article>
 
-            <article>
+            <button id="artikel2">Open Dag bij CMD Amsterdam - Janet Pietersen</button>
+            <article class="ART2">
                 <header>
                     <h3>Open Dag bij CMD Amsterdam</h3>
                     <p>Gepost door Janet Pietersen</p>
@@ -135,7 +159,8 @@ Docenten: Jonathan Leenman en Michelle
                 <p>Op <time datetime="2014-04-15">dinsdag 15 april 2014</time> verwelkomen wij alle studenten die zich… <a href="#">lees verder</a></p>
             </article>
 
-            <article>
+            <button id="artikel3">Hej hej! - Mattijs Blekemolen</button>
+            <article class="ART3">
                 <header>
                     <h3>Hej hej!</h3>
                     <p>Gepost door Mattijs Blekemolen</p>
@@ -145,7 +170,8 @@ Docenten: Jonathan Leenman en Michelle
                 <p>Alsof je moeder je betrapt terwijl je stiekem nog een koekje uit de trommel probeert te vissen… <a href="#">lees verder</a></p>
             </article>
 
-            <article>
+            <button id="artikel4">What Design Can Do! - Jacub Nolsen</button>
+            <article class="ART4">
                 <header>
                     <h3>What Design Can Do!</h3>
                     <p>Gepost door Jacub Nolsen</p>
@@ -156,7 +182,8 @@ Docenten: Jonathan Leenman en Michelle
                 <p>That's what design can do.</p>
             </article>
 
-            <article>
+            <button id="artikel5">Berlin, here we come! - Mattijs Blekemolen</button>
+            <article class="ART5">
                 <header>
                     <h3>Berlin, here we come!</h3>
                     <p>Gepost door Mattijs Blekemolen</p>
@@ -165,7 +192,7 @@ Docenten: Jonathan Leenman en Michelle
                 </header>
                 <p>Als aftrap van onze minor User Experience Design (<abbr title="User Experience Design">UxD</abbr>) gaan studenten en docenten… <a href="#">lees verder</a></p>
             </article>
-
+            </div>
         </section>
 
         <!-- Sidebar teksten en info: Laatste mededelingen, Agenda, Twitter -->
@@ -345,5 +372,6 @@ Docenten: Jonathan Leenman en Michelle
             <p id="feedback"><a href="#">Geef ons feedback</a></p>
 
         </footer>
+            <script src="script.js"></script>
     </body>
 </html>
